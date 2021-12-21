@@ -1,88 +1,219 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="ISO-8859-1">
-    <title>CSE310 WebRTC</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <title>CSE310 WebRTC Chat </title>
+    <script src="client.js"></script>
+    <style>
+        :root {
+            font-size: 62.5%;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            font-weight: lighter;
+            display: flex;
+            justify-content: center;
+            padding-top: 7rem;
+        }
+
+        .content {
+            height: 60vh;
+            width: 60%;
+            box-shadow: 0 0 3rem rgba(0,0,0,0.2);
+            display: flex;
+            border-radius: 0.6rem;
+        }
+
+        .content .logobox {
+            background: #3F51B5;
+            height: inherit;
+            width: 40%;
+            text-align: center;
+            color: white;
+            border-bottom-left-radius: 0.6rem;
+            border-top-left-radius: 0.6rem;
+        }
+
+        .content .logobox .appname {
+            font-size: 3rem;
+            line-height: 60vh;
+        }
+
+        .content .form {
+            height: 60vh;
+            vertical-align: top;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+        }
+
+        .content .form .form-body {
+            font-size: 1.4rem;
+        }
+
+        .content .form .form-body .login {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            display: block;
+        }
+
+        .content .form .form-body form label {
+            display: block;
+            margin-top: 1.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .content .form .form-body form .remember-me {
+            margin: 1.5rem 0;
+        }
+
+        .content .form .form-body form .remember-me input {
+            margin: 0 0.5rem 0 0;
+        }
+
+        .content .form .form-body form label.remember {
+            display: inline;
+        }
+
+        .content .form .form-body form .email, .content .form .form-body form .password {
+            border-radius: 0.4rem;
+            height: 3rem;
+            font-size: 1.4rem;
+            width: 25rem;
+            border: 0.1rem solid #ddd;
+        }
+
+        .content .form .form-body form .signin {
+            background-color: #3F51B5;
+            color: white;
+            border: 0;
+            padding: 1.2rem 6rem;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0.4rem;
+        }
+        :root {
+            font-size: 62.5%;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            font-weight: lighter;
+            display: flex;
+            justify-content: center;
+            padding-top: 7rem;
+        }
+
+        .content {
+            height: 60vh;
+            width: 60%;
+            box-shadow: 0 0 3rem rgba(0,0,0,0.2);
+            display: flex;
+            border-radius: 0.6rem;
+        }
+
+        .content .logobox {
+            background: #3F51B5;
+            height: inherit;
+            width: 40%;
+            text-align: center;
+            color: white;
+            border-bottom-left-radius: 0.6rem;
+            border-top-left-radius: 0.6rem;
+        }
+
+        .content .logobox .appname {
+            font-size: 3rem;
+            line-height: 60vh;
+        }
+
+        .content .form {
+            height: 60vh;
+            vertical-align: top;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+        }
+
+        .content .form .form-body {
+            font-size: 1.4rem;
+        }
+
+        .content .form .form-body .login {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            display: block;
+        }
+
+        .content .form .form-body form label {
+            display: block;
+            margin-top: 1.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .content .form .form-body form .remember-me {
+            margin: 1.5rem 0;
+        }
+
+        .content .form .form-body form .remember-me input {
+            margin: 0 0.5rem 0 0;
+        }
+
+        .content .form .form-body form label.remember {
+            display: inline;
+        }
+
+        .content .form .form-body form .email, .content .form .form-body form .password {
+            border-radius: 0.4rem;
+            height: 3rem;
+            font-size: 1.4rem;
+            width: 25rem;
+            border: 0.1rem solid #ddd;
+        }
+
+        .content .form .form-body form .signin {
+            background-color: #3F51B5;
+            color: white;
+            border: 0;
+            padding: 1.2rem 6rem;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0.4rem;
+        }
+
+    </style>
 </head>
 <body>
-
-
-<style type="text/css">
-    body,td,th{
-        color: #000000;
-    }
-
-    body{
-        background-color: #F0F0F0;
-    }
-
-    .style1
-    {
-        font-family: arial;
-        font-size: 14px;
-        padding: 12px;
-        line-height: 25px;
-        border-radius: 4px;
-        text-decoration: none;
-
-    }
-
-    .style2
-    {
-        font-family: arial;
-        font-size: 17px;
-        padding: 12px;
-        line-height: 25px;
-        border-radius: 4px;
-        text-decoration: none;
-
-    }
-
-
-</style>
-
-</body>
-<body>
-<div class="container">
-    <table width="100%" height="100%" border="0" cellpadding="0" align="center">
-        <tr>
-            <td align="center" valign="middle">
-                <table class="table-bordered" width="350" border="0" cellpadding="3"cellspacing="3" bgcolor="#ffffff">
-
-                    <form action="#" th:action="@{/login}" th:object="${user}" method="post">
-
-
-                        <tr>
-                            <td height="25" colspan="2" align="left" valign="middle" bgcolor="#ffffff" class="style2">
-                                <div align="center">
-                                    <strong>User Login</strong>
-                                </div>
-
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Username</td>
-                            <td>
-
-                                <input type="text" th:field="*{username}" class="form-control" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Password</td>
-                            <td><input type="password" th:field="*{password}" class="form-control" /></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><button type="submit" class="btn btn-info" align="right">Login</button> </td>
-                        </tr>
-
-                    </form>
-                </table>
-            </td>
-        </tr>
-    </table>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+<div class="content">
+    <div class="logobox">
+        <span class="appname">CSE310 Chat</span>
+    </div>
+    <div class="form">
+        <div class="form-body">
+            <span class="login">Login</span>
+            <form action="#" th:action="@{/login}" th:object="${user}" method="post">
+                <label for="email">Username</label>
+                <input type="text" th:field="*{username}" class="email"><br/>
+                <label for="password">Password</label>
+                <input type="password" th:field="*{password}" class="password"><br/>
+                <div class="remember-me">
+                    <input type="checkbox">
+                    <label for="checkbox" class="remember">Remember Me</label>
+                </div>
+                <input type="submit" class="signin" value="Sign In">
+            </form>
+<!--            <span>New User? Create Account</span>-->
+        </div>
+    </div>
 </div>
-
 </body>
 </html>

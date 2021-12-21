@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>310 WebRTC</title>
+  <script src="server.js"> </script>
+  <style>
+    .center {
+      margin-top: 2px;
+      padding: 5px;
+      text-align: center;
+      border: 3px solid green;
+    }
+  </style>
 </head>
+
 <body>
-$END$
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+
+
+
+<div class="center" >
+  <h2>CSE310 WebRTC Chat</h2>
+</div>
+
+
+<video style="display: block; margin: 0 auto;" src="" id="iv" width="800px" height="700px" autoplay="autoplay"></video>
+<video style="display: block; margin: 0 auto;" src="" id="iv2" width="800px" height="700px" autoplay="autoplay"></video>
+<input id="sendWorld">
+
+<button onclick="cn()">Go!</button>
 </body>
+
 </html>

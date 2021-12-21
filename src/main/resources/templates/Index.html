@@ -3,13 +3,33 @@
 <head>
     <meta charset="ISO-8859-1">
     <title>CSE310 Project</title>
+    <style>
+        .center {
+            margin-top: 2px;
+            padding: 5px;
+            text-align: center;
+            border: 3px solid green;
+        }
+        .room{
+            padding-left: 45%;
+            padding-top: 5%;
+        }
+        .logout{
+            padding-left: 45.3%;
+            padding-top: 3%;
+        }
+    </style>
 </head>
 <body>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
 
-<h1>Welcome to Home Page</h1>
-<form th:action="@{/logout}" method="post">
-    <input type="submit" class="btn btn-info" value="Logout" />
+<h2 class="center" >Choose what you want!</h2>
+<div class="room">
+    <button class="button" onclick="location.href='Room.html'">Join Room</button>
+</div>
+
+<form class="logout" th:action="@{/logout}" method="post">
+    <input type="submit" class="btn btn-info" value="Log out" />
 </form>
 </body>
 </html>

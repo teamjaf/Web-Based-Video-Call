@@ -1,0 +1,182 @@
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    padding-top: 7rem;
+}
+
+.content {
+    height: 60vh;
+    width: 60%;
+    box-shadow: 0 0 3rem rgba(0,0,0,0.2);
+    display: flex;
+    border-radius: 0.6rem;
+}
+
+.content .logobox {
+    background: #3F51B5;
+    height: inherit;
+    width: 40%;
+    text-align: center;
+    color: white;
+    border-bottom-left-radius: 0.6rem;
+    border-top-left-radius: 0.6rem;
+}
+
+.content .logobox .appname {
+    font-size: 3rem;
+    line-height: 60vh;
+}
+
+.content .form {
+    height: 60vh;
+    vertical-align: top;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+}
+
+.content .form .form-body {
+    font-size: 1.4rem;
+}
+
+.content .form .form-body .login {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    display: block;
+}
+
+.content .form .form-body form label {
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.content .form .form-body form .remember-me {
+    margin: 1.5rem 0;
+}
+
+.content .form .form-body form .remember-me input {
+    margin: 0 0.5rem 0 0;
+}
+
+.content .form .form-body form label.remember {
+    display: inline;
+}
+
+.content .form .form-body form .email, .content .form .form-body form .password {
+    border-radius: 0.4rem;
+    height: 3rem;
+    font-size: 1.4rem;
+    width: 25rem;
+    border: 0.1rem solid #ddd;
+}
+
+.content .form .form-body form .signin {
+    background-color: #3F51B5;
+    color: white;
+    border: 0;
+    padding: 1.2rem 6rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.4rem;
+}
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    padding-top: 7rem;
+}
+
+.content {
+    height: 60vh;
+    width: 60%;
+    box-shadow: 0 0 3rem rgba(0,0,0,0.2);
+    display: flex;
+    border-radius: 0.6rem;
+}
+
+.content .logobox {
+    background: #3F51B5;
+    height: inherit;
+    width: 40%;
+    text-align: center;
+    color: white;
+    border-bottom-left-radius: 0.6rem;
+    border-top-left-radius: 0.6rem;
+}
+
+.content .logobox .appname {
+    font-size: 3rem;
+    line-height: 60vh;
+}
+
+.content .form {
+    height: 60vh;
+    vertical-align: top;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+}
+
+.content .form .form-body {
+    font-size: 1.4rem;
+}
+
+.content .form .form-body .login {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    display: block;
+}
+
+.content .form .form-body form label {
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.content .form .form-body form .remember-me {
+    margin: 1.5rem 0;
+}
+
+.content .form .form-body form .remember-me input {
+    margin: 0 0.5rem 0 0;
+}
+
+.content .form .form-body form label.remember {
+    display: inline;
+}
+
+.content .form .form-body form .email, .content .form .form-body form .password {
+    border-radius: 0.4rem;
+    height: 3rem;
+    font-size: 1.4rem;
+    width: 25rem;
+    border: 0.1rem solid #ddd;
+}
+
+.content .form .form-body form .signin {
+    background-color: #3F51B5;
+    color: white;
+    border: 0;
+    padding: 1.2rem 6rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.4rem;
+}
